@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xFB-9D-DIO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="uRp-BF-my8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xFB-9D-DIO" customClass="ViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="hbm-Wv-RG5"/>
+                        <viewControllerLayoutGuide type="bottom" id="GsG-px-f6x"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="gyn-iM-FK6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-MG-aRm">
+                                <rect key="frame" x="217" y="113" width="97" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="zipCodeEntered"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqK-Ui-WhB">
+                                <rect key="frame" x="192" y="195" width="146" height="30"/>
+                                <state key="normal" title="Use Current Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mQ-mA-Exy">
+                                <rect key="frame" x="253" y="159" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-k3-vM0">
+                                <rect key="frame" x="322" y="112" width="49" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="submitZipCodeButton"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="xFB-9D-DIO" eventType="touchUpInside" id="7O0-fp-qdQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter a valid 5 digit Zip Code!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-Eg-wxr" userLabel="zipCodeError">
+                                <rect key="frame" x="117" y="71" width="297" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wp6-MG-aRm" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="201" id="3ED-MW-045"/>
+                            <constraint firstItem="5mQ-mA-Exy" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="237" id="F2H-sW-0NT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kqK-Ui-WhB" secondAttribute="trailing" constant="246" id="HVx-KB-uiU"/>
+                            <constraint firstItem="uIa-k3-vM0" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="92" id="IVb-uM-anF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wp6-MG-aRm" secondAttribute="trailing" constant="270" id="KNt-aQ-gR1"/>
+                            <constraint firstItem="uIa-k3-vM0" firstAttribute="leading" secondItem="Wp6-MG-aRm" secondAttribute="trailing" constant="8" id="NIv-ew-Xzd"/>
+                            <constraint firstAttribute="centerX" secondItem="kqK-Ui-WhB" secondAttribute="centerX" id="TGP-xd-twk"/>
+                            <constraint firstItem="5mQ-mA-Exy" firstAttribute="top" secondItem="Wp6-MG-aRm" secondAttribute="bottom" constant="16" id="WSc-ZN-8yx"/>
+                            <constraint firstItem="vDB-Eg-wxr" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="51" id="XbK-5m-hz5"/>
+                            <constraint firstAttribute="centerX" secondItem="vDB-Eg-wxr" secondAttribute="centerX" id="ZKj-8h-XGq"/>
+                            <constraint firstItem="kqK-Ui-WhB" firstAttribute="top" secondItem="5mQ-mA-Exy" secondAttribute="bottom" constant="15" id="fFI-qm-JID"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5mQ-mA-Exy" secondAttribute="trailing" constant="306" id="frA-lR-aSL"/>
+                            <constraint firstAttribute="centerX" secondItem="Wp6-MG-aRm" secondAttribute="centerX" id="i8l-OY-VWa"/>
+                            <constraint firstItem="kqK-Ui-WhB" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="176" id="m3w-zE-egu"/>
+                            <constraint firstItem="Wp6-MG-aRm" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="93" id="srQ-wW-bSk"/>
+                            <constraint firstAttribute="centerX" secondItem="5mQ-mA-Exy" secondAttribute="centerX" id="zcY-vr-aQX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3ED-MW-045"/>
+                                <exclude reference="KNt-aQ-gR1"/>
+                                <exclude reference="HVx-KB-uiU"/>
+                                <exclude reference="m3w-zE-egu"/>
+                                <exclude reference="F2H-sW-0NT"/>
+                                <exclude reference="frA-lR-aSL"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="zipCodeEntered" destination="Wp6-MG-aRm" id="JGd-dj-Fv2"/>
+                        <outlet property="zipCodeError" destination="vDB-Eg-wxr" id="kjQ-n8-ifa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukr-py-L6i" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

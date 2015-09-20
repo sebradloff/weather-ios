@@ -28,9 +28,23 @@ class weatherUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testShouldShowWeatherForZipCodeEntered() {
+        let app = XCUIApplication()
+        let zipCodeTextField = app.textFields["zipCodeEntered"]
+        zipCodeTextField.tap()
+        zipCodeTextField.typeText("60614")
+        app.buttons["submitZipCodeButton"].tap()
+    }
+    
+    func testShouldShowZipCodeErrorMessageWhenNonValidZipCodeIsEntered() {
+        let app = XCUIApplication()
+        let zipCodeTextField = app.textFields["zipCodeEntered"]
+        
+        zipCodeTextField.tap()
+        zipCodeTextField.typeText("6061")
+        app.buttons["submitZipCodeButton"].tap()
+        
+        XCTAssert(app.staticTexts["Please enter a valid 5 digit Zip Code!"].exists)
     }
     
 }
