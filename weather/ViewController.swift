@@ -50,6 +50,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func submitButtonPressed(sender: AnyObject) {
         if (validator.validateZipCode(zipCodeEntered.text!)){
             zipCodeError.hidden = true
+            zipCodeEntered.resignFirstResponder()
+            
             weatherService.fetchZipCodeWeather(zipCodeEntered.text!, completionHandler: { (weather: Dictionary<String,Double>) -> () in
                 let tempDictionary: Dictionary<String, Double> = weather
                 
