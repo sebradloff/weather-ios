@@ -1,0 +1,51 @@
+{
+	"port": 3535,
+	"protocol": "http",
+    "stubs": [
+    	{
+    		"predicates": [
+    			{
+    				"contains": {
+    					"path" : "/data/2.5/weather"
+    				},
+                    "equals": {
+                        "query": {
+                            "zip": "60614,us"
+                        }
+                    }
+    			}
+    		],
+    		"responses": [
+    			{
+    				"is" : {
+    					"body": "{\"coord\":{\"lon\":-87.65,\"lat\":41.85},\"weather\":[{\"id\":802,\"main\":\"Clouds\",\"description\":\"scattered clouds\",\"icon\":\"03d\"}],\"base\":\"cmc stations\",\"main\":{\"temp\":294.48,\"pressure\":1021,\"humidity\":40,\"temp_min\":293.15,\"temp_max\":296.15},\"wind\":{\"speed\":4.1,\"deg\":90},\"clouds\":{\"all\":40},\"dt\":1442783512,\"sys\":{\"type\":1,\"id\":961,\"message\":0.004,\"country\":\"US\",\"sunrise\":1442748997,\"sunset\":1442793011},\"id\":4887398,\"name\":\"Chicago\",\"cod\":200}"
+    				} 
+    			}
+    		]
+    	},
+        {
+            "predicates": [
+                {
+                    "contains": {
+                        "path" : "/data/2.5/weather"
+                    },
+                    "equals": {
+                        "query": {
+                            "lat": "41.9155257345321",
+                            "lon": "-87.6512061212324"
+                        }
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is" : {
+                      "body": "{\"coord\":{\"lon\":-87.65,\"lat\":41.85},\"weather\":[{\"id\":802,\"main\":\"Clouds\",\"description\":\"scattered clouds\",\"icon\":\"03d\"}],\"base\":\"cmc stations\",\"main\":{\"temp\":294.22,\"pressure\":1020,\"humidity\":40,\"temp_min\":292.59,\"temp_max\":296.15},\"wind\":{\"speed\":2.6,\"deg\":120},\"clouds\":{\"all\":40},\"dt\":1442784712,\"sys\":{\"type\":1,\"id\":961,\"message\":0.0107,\"country\":\"US\",\"sunrise\":1442748998,\"sunset\":1442793009},\"id\":4887398,\"name\":\"Chicago\",\"cod\":200}"
+                      }
+                }
+            ]
+        }
+
+    ]
+}
+

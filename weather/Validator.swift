@@ -10,8 +10,6 @@ import Foundation
 
 public class Validator : NSObject {
     
-    
-    
     func validateZipCode(zipCode: String)-> Bool{
         if (zipCode.characters.count == 5){
             return true

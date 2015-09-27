@@ -38,6 +38,27 @@ class weatherUITests: XCTestCase {
     
     func testShouldShowZipCodeErrorMessageWhenNonValidZipCodeIsEntered() {
         let app = XCUIApplication()
+        var elements = app.otherElements["userEnterView"].textFields["zipCodeEntered"]
+        
+//        for el in elements {
+//            print(el.label)
+//        }
+        
+        print(app.otherElements["userEnterView"].textFields["zipCodeEntered"].label)
+        
+//        let elements = app.otherElements
+        
+        print(app.textFields.count)
+        print(app.buttons.count)
+
+//        app.otherElements["userEnterView"].accessibilityLabel
+//        app.otherElements["userEnterView"].textFields["zipCodeEntered"].tap()
+//        app.typeText("75001")
+        
+        
+        
+        
+
         let zipCodeTextField = app.textFields["zipCodeEntered"]
         
         zipCodeTextField.tap()
@@ -45,6 +66,18 @@ class weatherUITests: XCTestCase {
         app.buttons["submitZipCodeButton"].tap()
         
         XCTAssert(app.staticTexts["Please enter a valid 5 digit Zip Code!"].exists)
+    }
+    
+    func testShouldShowCurrentTemperatureWhenSuccessfulCall(){
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        
+//       
+//      
+//        let exists = NSPredicate(format: "exists == true")
+//        
+//        expectationForPredicate(exists, evaluatedWithObject: currentTemp, handler: nil)
+//        waitForExpectationsWithTimeout(5, handler: nil)
     }
     
 }

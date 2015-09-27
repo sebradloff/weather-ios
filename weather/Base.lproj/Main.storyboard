@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xFB-9D-DIO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,81 +15,202 @@
                         <viewControllerLayoutGuide type="bottom" id="GsG-px-f6x"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gyn-iM-FK6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-MG-aRm">
-                                <rect key="frame" x="217" y="113" width="97" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label="zipCodeEntered"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqK-Ui-WhB">
-                                <rect key="frame" x="192" y="195" width="146" height="30"/>
-                                <state key="normal" title="Use Current Location">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mQ-mA-Exy">
-                                <rect key="frame" x="253" y="159" width="25" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-k3-vM0">
-                                <rect key="frame" x="322" y="112" width="49" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label="submitZipCodeButton"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitButtonPressed:" destination="xFB-9D-DIO" eventType="touchUpInside" id="7O0-fp-qdQ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter a valid 5 digit Zip Code!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-Eg-wxr" userLabel="zipCodeError">
-                                <rect key="frame" x="117" y="71" width="297" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpb-Sm-Meh" userLabel="tempView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-kG-5my">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <accessibility key="accessibilityConfiguration" label="currentTempLabel"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="87" y="20" width="161" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95 F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-5m-ZyK">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <accessibility key="accessibilityConfiguration" label="currentTemp">
+                                            <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="132" y="49" width="71" height="22"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tempView" label="tempView">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="AVD-kG-5my"/>
+                                        <exclude reference="EXW-5m-ZyK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="AVD-kG-5my"/>
+                                        <include reference="EXW-5m-ZyK"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-dd-7Ai" userLabel="userEnterView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a valid 5 digit Zip Code!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-Eg-wxr" userLabel="zipCodeError">
+                                        <rect key="frame" x="144" y="70" width="297" height="21"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="27" y="11" width="280" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-MG-aRm" userLabel="ZipCodeEntered">
+                                        <rect key="frame" x="244" y="113" width="97" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="zipCodeEntered" label="zipCodeEntered">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="127" y="40" width="80" height="30"/>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqK-Ui-WhB">
+                                        <rect key="frame" x="225" y="195" width="146" height="30"/>
+                                        <state key="normal" title="Use Current Location">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="94" y="120" width="146" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="useCurrentLocation:" destination="xFB-9D-DIO" eventType="touchUpInside" id="y6V-gO-pp9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mQ-mA-Exy">
+                                        <rect key="frame" x="286" y="160" width="25" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="155" y="82" width="24" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-k3-vM0">
+                                        <rect key="frame" x="349" y="112" width="49" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="submitZipCodeButton"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="215" y="40" width="49" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="xFB-9D-DIO" eventType="touchUpInside" id="7O0-fp-qdQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="userEnterView" label="userEnterView">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="vDB-Eg-wxr"/>
+                                        <exclude reference="Wp6-MG-aRm"/>
+                                        <exclude reference="kqK-Ui-WhB"/>
+                                        <exclude reference="5mQ-mA-Exy"/>
+                                        <exclude reference="uIa-k3-vM0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="vDB-Eg-wxr"/>
+                                        <include reference="Wp6-MG-aRm"/>
+                                        <include reference="kqK-Ui-WhB"/>
+                                        <include reference="5mQ-mA-Exy"/>
+                                        <include reference="uIa-k3-vM0"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wp6-MG-aRm" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="201" id="3ED-MW-045"/>
-                            <constraint firstItem="5mQ-mA-Exy" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="237" id="F2H-sW-0NT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kqK-Ui-WhB" secondAttribute="trailing" constant="246" id="HVx-KB-uiU"/>
-                            <constraint firstItem="uIa-k3-vM0" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="92" id="IVb-uM-anF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wp6-MG-aRm" secondAttribute="trailing" constant="270" id="KNt-aQ-gR1"/>
-                            <constraint firstItem="uIa-k3-vM0" firstAttribute="leading" secondItem="Wp6-MG-aRm" secondAttribute="trailing" constant="8" id="NIv-ew-Xzd"/>
-                            <constraint firstAttribute="centerX" secondItem="kqK-Ui-WhB" secondAttribute="centerX" id="TGP-xd-twk"/>
-                            <constraint firstItem="5mQ-mA-Exy" firstAttribute="top" secondItem="Wp6-MG-aRm" secondAttribute="bottom" constant="16" id="WSc-ZN-8yx"/>
-                            <constraint firstItem="vDB-Eg-wxr" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="51" id="XbK-5m-hz5"/>
-                            <constraint firstAttribute="centerX" secondItem="vDB-Eg-wxr" secondAttribute="centerX" id="ZKj-8h-XGq"/>
-                            <constraint firstItem="kqK-Ui-WhB" firstAttribute="top" secondItem="5mQ-mA-Exy" secondAttribute="bottom" constant="15" id="fFI-qm-JID"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5mQ-mA-Exy" secondAttribute="trailing" constant="306" id="frA-lR-aSL"/>
-                            <constraint firstAttribute="centerX" secondItem="Wp6-MG-aRm" secondAttribute="centerX" id="i8l-OY-VWa"/>
-                            <constraint firstItem="kqK-Ui-WhB" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="176" id="m3w-zE-egu"/>
-                            <constraint firstItem="Wp6-MG-aRm" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="93" id="srQ-wW-bSk"/>
-                            <constraint firstAttribute="centerX" secondItem="5mQ-mA-Exy" secondAttribute="centerX" id="zcY-vr-aQX"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="centerX" secondItem="gyn-iM-FK6" secondAttribute="centerX" id="8JL-8V-DgO"/>
+                            <constraint firstItem="GsG-px-f6x" firstAttribute="top" secondItem="Cpb-Sm-Meh" secondAttribute="bottom" constant="216" id="Dpy-24-hl7"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="centerX" secondItem="gyn-iM-FK6" secondAttribute="centerX" id="HiR-Gt-SJW"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="leading" secondItem="Cpb-Sm-Meh" secondAttribute="leading" id="TDN-Lf-7CF"/>
+                            <constraint firstItem="Cpb-Sm-Meh" firstAttribute="top" secondItem="fwc-dd-7Ai" secondAttribute="bottom" constant="59" id="VYc-SE-Oi9"/>
+                            <constraint firstItem="Cpb-Sm-Meh" firstAttribute="leading" secondItem="gyn-iM-FK6" secondAttribute="leadingMargin" constant="4" id="ZKK-FC-0bW"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="trailing" secondItem="Cpb-Sm-Meh" secondAttribute="trailing" id="e0p-EX-dGB"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="13" id="exi-kt-1kT"/>
+                            <constraint firstItem="Cpb-Sm-Meh" firstAttribute="top" secondItem="gyn-iM-FK6" secondAttribute="top" constant="277" id="pS2-g7-CVU"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="centerX" secondItem="gyn-iM-FK6" secondAttribute="centerX" id="tzU-8c-k0m"/>
+                            <constraint firstItem="fwc-dd-7Ai" firstAttribute="top" secondItem="hbm-Wv-RG5" secondAttribute="bottom" constant="13" id="yqG-Ug-los"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Cpb-Sm-Meh"/>
+                                <exclude reference="fwc-dd-7Ai"/>
+                            </mask>
                             <mask key="constraints">
-                                <exclude reference="3ED-MW-045"/>
-                                <exclude reference="KNt-aQ-gR1"/>
-                                <exclude reference="HVx-KB-uiU"/>
-                                <exclude reference="m3w-zE-egu"/>
-                                <exclude reference="F2H-sW-0NT"/>
-                                <exclude reference="frA-lR-aSL"/>
+                                <exclude reference="Dpy-24-hl7"/>
+                                <exclude reference="VYc-SE-Oi9"/>
+                                <exclude reference="ZKK-FC-0bW"/>
+                                <exclude reference="pS2-g7-CVU"/>
+                                <exclude reference="8JL-8V-DgO"/>
+                                <exclude reference="HiR-Gt-SJW"/>
+                                <exclude reference="TDN-Lf-7CF"/>
+                                <exclude reference="e0p-EX-dGB"/>
+                                <exclude reference="exi-kt-1kT"/>
+                                <exclude reference="tzU-8c-k0m"/>
+                                <exclude reference="yqG-Ug-los"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Cpb-Sm-Meh"/>
+                                <include reference="fwc-dd-7Ai"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Dpy-24-hl7"/>
+                                <include reference="VYc-SE-Oi9"/>
+                                <include reference="ZKK-FC-0bW"/>
+                                <include reference="pS2-g7-CVU"/>
+                                <exclude reference="8JL-8V-DgO"/>
+                                <include reference="HiR-Gt-SJW"/>
+                                <include reference="TDN-Lf-7CF"/>
+                                <include reference="e0p-EX-dGB"/>
+                                <exclude reference="exi-kt-1kT"/>
+                                <exclude reference="tzU-8c-k0m"/>
+                                <include reference="yqG-Ug-los"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="currentTemp" destination="EXW-5m-ZyK" id="nq3-JU-Xrc"/>
+                        <outlet property="tempView" destination="Cpb-Sm-Meh" id="sGL-1d-h3B"/>
                         <outlet property="zipCodeEntered" destination="Wp6-MG-aRm" id="JGd-dj-Fv2"/>
                         <outlet property="zipCodeError" destination="vDB-Eg-wxr" id="kjQ-n8-ifa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ukr-py-L6i" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="553.5" y="325.125"/>
         </scene>
     </scenes>
 </document>

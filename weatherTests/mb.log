@@ -1,0 +1,53 @@
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-09-25T19:00:24.361Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2015-09-25T19:00:24.380Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-09-25T19:00:24.394Z"}
+{"level":"info","message":"[mb:2525] GET /","timestamp":"2015-09-25T19:00:38.382Z"}
+{"level":"info","message":"[mb:2525] GET /imposters","timestamp":"2015-09-25T19:00:42.630Z"}
+{"level":"info","message":"[mb:2525] GET /imposters/3535","timestamp":"2015-09-25T19:00:45.626Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:34:38.472Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:50:56.809Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:51:55.638Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:52:37.785Z"}
+{"level":"info","message":"[http:3535] ::1:53596 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:53:50.973Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:54:21.543Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:56:30.717Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:57:11.244Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T20:57:38.078Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:03:24.713Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:09:56.635Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:13:04.421Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:15:25.489Z"}
+{"level":"info","message":"[http:3535] ::1:54346 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:16:34.546Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:17:38.429Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:20:03.683Z"}
+{"level":"info","message":"[mb:2525] GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:20:56.371Z"}
+{"level":"info","message":"[http:3535] ::1:54500 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:21:53.689Z"}
+{"level":"info","message":"[http:3535] ::1:54505 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:22:05.654Z"}
+{"level":"info","message":"[http:3535] ::1:54506 => GET /favicon.ico","timestamp":"2015-09-25T21:22:06.188Z"}
+{"level":"info","message":"[http:3535] ::1:54516 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:22:35.773Z"}
+{"level":"info","message":"[http:3535] ::1:54636 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:26:09.090Z"}
+{"level":"info","message":"[http:3535] ::1:54652 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:26:58.946Z"}
+{"level":"info","message":"[http:3535] ::1:54683 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T21:27:48.419Z"}
+{"level":"info","message":"[http:3535] ::1:57148 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:08:00.381Z"}
+{"level":"info","message":"[http:3535] ::1:57180 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:09:43.932Z"}
+{"level":"info","message":"[http:3535] ::1:57208 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:11:15.464Z"}
+{"level":"info","message":"[http:3535] ::1:57232 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:12:35.132Z"}
+{"level":"info","message":"[http:3535] ::1:57242 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:13:00.711Z"}
+{"level":"info","message":"[http:3535] ::1:57341 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:16:30.738Z"}
+{"level":"info","message":"[http:3535] ::1:57355 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:17:13.576Z"}
+{"level":"info","message":"[http:3535] ::1:57398 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:19:44.886Z"}
+{"level":"info","message":"[http:3535] ::1:57410 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:20:20.496Z"}
+{"level":"info","message":"[http:3535] ::1:57557 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:27:04.895Z"}
+{"level":"info","message":"[http:3535] ::1:57591 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:28:55.612Z"}
+{"level":"info","message":"[http:3535] ::1:57607 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:29:33.943Z"}
+{"level":"info","message":"[http:3535] ::1:57642 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:31:36.683Z"}
+{"level":"info","message":"[http:3535] ::1:57654 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:32:06.764Z"}
+{"level":"info","message":"[http:3535] ::1:57672 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:33:03.370Z"}
+{"level":"info","message":"[http:3535] ::1:57693 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:34:07.153Z"}
+{"level":"info","message":"[http:3535] ::1:57718 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:35:27.309Z"}
+{"level":"info","message":"[http:3535] ::1:57724 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-25T23:35:36.354Z"}
+{"level":"info","message":"[http:3535] ::1:62608 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-27T16:48:13.252Z"}
+{"level":"info","message":"[http:3535] ::1:62621 => GET /data/2.5/weather?lat=41.9155257345321&lon=-87.6512061212324","timestamp":"2015-09-27T16:48:48.744Z"}
+{"level":"info","message":"[http:3535] ::1:62622 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-27T16:48:48.762Z"}
+{"level":"info","message":"[http:3535] ::1:62628 => GET /data/2.5/weather?lat=41.9155257345321&lon=-87.6512061212324","timestamp":"2015-09-27T16:49:03.486Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-09-27T20:59:44.165Z"}
