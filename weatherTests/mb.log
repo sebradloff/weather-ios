@@ -51,3 +51,42 @@
 {"level":"info","message":"[http:3535] ::1:62622 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-27T16:48:48.762Z"}
 {"level":"info","message":"[http:3535] ::1:62628 => GET /data/2.5/weather?lat=41.9155257345321&lon=-87.6512061212324","timestamp":"2015-09-27T16:49:03.486Z"}
 {"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-09-27T20:59:44.165Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-09-28T00:24:25.335Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2015-09-28T00:24:25.358Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-09-28T00:24:25.375Z"}
+{"level":"info","message":"[http:3535] ::1:61006 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-09-28T00:24:28.611Z"}
+{"level":"info","message":"[mb:2525] GET /imposters","timestamp":"2015-09-28T00:44:21.094Z"}
+{"level":"info","message":"[mb:2525] GET /imposters/3535","timestamp":"2015-09-28T00:44:24.270Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-09-28T03:01:03.997Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-10-01T15:28:29.792Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2015-10-01T15:28:29.814Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-10-01T15:28:29.831Z"}
+{"level":"info","message":"[http:3535] ::1:60777 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-10-01T15:28:45.293Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-10-01T15:28:56.690Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-10-01T15:35:32.966Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2015-10-01T15:35:32.983Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-10-01T15:35:32.994Z"}
+{"level":"info","message":"[http:3535] ::1:61167 => POST /imposters","timestamp":"2015-10-01T15:37:42.331Z"}
+{"level":"info","message":"[mb:2525] GET /imposters","timestamp":"2015-10-01T15:37:52.189Z"}
+{"level":"info","message":"[mb:2525] GET /imposters/3535","timestamp":"2015-10-01T15:37:56.820Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2015-10-01T15:38:41.717Z"}
+{"level":"warn","message":"[mb:2525] error creating imposter: {\"code\":\"resource conflict\",\"message\":\"The port is already in use\",\"name\":\"Error\",\"stack\":\"Error\\n    at Object.from (/usr/local/lib/node_modules/mountebank/src/util/inherit.js:9:17)\\n    at Object.ResourceConflictError (/usr/local/lib/node_modules/mountebank/src/util/errors.js:8:30)\\n    at Domain.errorHandler (/usr/local/lib/node_modules/mountebank/src/models/imposter.js:11:36)\\n    at Domain.emit (events.js:107:17)\\n    at Server.emit (events.js:83:19)\\n    at net.js:1160:12\\n    at process._tickDomainCallback (node.js:381:11)\"}","timestamp":"2015-10-01T15:38:41.719Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-10-01T17:44:13.480Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-10-01T17:44:15.135Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2015-10-01T17:44:15.156Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-10-01T17:44:15.170Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2015-10-01T17:44:17.424Z"}
+{"level":"warn","message":"[mb:2525] error creating imposter: {\"code\":\"resource conflict\",\"message\":\"The port is already in use\",\"name\":\"Error\",\"stack\":\"Error\\n    at Object.from (/usr/local/lib/node_modules/mountebank/src/util/inherit.js:9:17)\\n    at Object.ResourceConflictError (/usr/local/lib/node_modules/mountebank/src/util/errors.js:8:30)\\n    at Domain.errorHandler (/usr/local/lib/node_modules/mountebank/src/models/imposter.js:11:36)\\n    at Domain.emit (events.js:107:17)\\n    at Server.emit (events.js:83:19)\\n    at net.js:1160:12\\n    at process._tickDomainCallback (node.js:381:11)\"}","timestamp":"2015-10-01T17:44:17.432Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-10-01T17:44:50.947Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-10-01T17:44:55.050Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2015-10-01T17:44:58.600Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-10-01T17:44:58.615Z"}
+{"level":"info","message":"[http:3535] ::1:62213 => GET /hello","timestamp":"2015-10-01T17:45:22.872Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-10-01T20:43:22.572Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-10-02T15:06:07.269Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-10-02T15:48:36.973Z"}
+{"level":"info","message":"[mb:2525] mountebank v1.2.122 now taking orders - point your browser to http://localhost:2525 for help","timestamp":"2015-10-06T22:31:54.770Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2015-10-06T22:31:59.155Z"}
+{"level":"info","message":"[http:3535] Open for business...","timestamp":"2015-10-06T22:31:59.170Z"}
+{"level":"info","message":"[http:3535] ::1:57122 => GET /data/2.5/weather?zip=60614,us","timestamp":"2015-10-06T22:32:04.395Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2015-10-06T22:32:10.197Z"}

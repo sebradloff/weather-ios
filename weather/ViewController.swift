@@ -11,6 +11,8 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet var mainView: UIView!
+    
     let validator = Validator()
     let weatherService = WeatherService(baseURL: "http://api.openweathermap.org")
     let tempConverter = TempConverter()

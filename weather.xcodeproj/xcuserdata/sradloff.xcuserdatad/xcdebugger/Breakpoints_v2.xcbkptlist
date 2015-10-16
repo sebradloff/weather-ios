@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "weatherUITests/weatherUITests.swift"
-            timestampString = "464987787.075977"
+            timestampString = "465963287.563364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "testShouldShowZipCodeErrorMessageWhenNonValidZipCodeIsEntered()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "weatherUITests/weatherUITests.swift"
-            timestampString = "465002744.702539"
+            timestampString = "465963287.563364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "testShouldShowZipCodeErrorMessageWhenNonValidZipCodeIsEntered()"
             landmarkType = "5">
          </BreakpointContent>

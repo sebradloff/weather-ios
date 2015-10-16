@@ -34,6 +34,8 @@ class weatherUITests: XCTestCase {
         zipCodeTextField.tap()
         zipCodeTextField.typeText("60614")
         app.buttons["submitZipCodeButton"].tap()
+        print(app.debugDescription)
+        app.staticTexts["95"]
     }
     
     func testShouldShowZipCodeErrorMessageWhenNonValidZipCodeIsEntered() {

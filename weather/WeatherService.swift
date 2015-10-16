@@ -11,6 +11,7 @@ import Foundation
 public class WeatherService {
     var baseURL: String
     let baseAPIURL =  "/data/2.5/weather?"
+    let obfuscatedApiKey: String = "3861363736626634333938646666363935363363326538626461346238613338"
     
     init(baseURL: String){
         self.baseURL = baseURL
@@ -60,6 +61,20 @@ public class WeatherService {
             }
         }
         task.resume()
+    }
+    
+    private func nonObfuscate() -> String {
+        var sb = ""
+        var temp = ""
+        
+//        let myString = "Hello World"
+//        let myRange = Range<String.Index>(start: myString.startIndex, end: myString.startIndex.advancedBy(5))
+        
+        for (var i = 0; i < (obfuscatedApiKey.characters.count - 1) ; i+=2){
+            var output = obfuscatedApiKey[obfuscatedApiKey.startIndex.advancedBy(i)..<obfuscatedApiKey.startIndex.advancedBy(i+2)]
+            var decimal = 
+        }
+        return ""
     }
     
 }
